@@ -5,7 +5,7 @@
   --burgundy-dk: #3a0e0e;
   --gold:        #C9A84C;
   --gold-lt:     #e8c96a;
-  --bg:          #1a0a0a;
+  --bg:          #2d1010;
   --surface:     #2a1010;
   --surface2:    #341515;
   --border:      #5a2a2a;
@@ -151,7 +151,7 @@ table {
   font-size: .8rem;
   white-space: nowrap;
 }
-thead { position: sticky; top: 60px; z-index: 10; }
+thead { position: sticky; top: 168px; z-index: 10; }
 th {
   background: var(--burgundy-dk);
   color: rgba(201,168,76,.75);
