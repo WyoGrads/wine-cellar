@@ -1,8 +1,8 @@
 // ── Config ─────────────────────────────────────────────────────────────────
 // Replace these two values with your Supabase project credentials.
 // Supabase dashboard → Settings → API
-const SUPABASE_URL      = 'https://REPLACE_PROJECT_REF.supabase.co';
-const SUPABASE_ANON_KEY = 'REPLACE_SUPABASE_ANON_KEY';
+const SUPABASE_URL      = 'https://ldjckkcblqayqdsuhswu.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxkamNra2NibHFheXFkc3Voc3d1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAyMjI2MTEsImV4cCI6MjA5NTc5ODYxMX0.MdbtvbFeaZI4jBi03pgbF6GjtYVuGLfnw2pZjReV--Q';
 // ───────────────────────────────────────────────────────────────────────────
 
 const PAGE_SIZE = 100;
