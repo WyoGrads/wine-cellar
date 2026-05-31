@@ -14,34 +14,17 @@
         <img src="assets/logo.png" alt="WyoGrads" class="logo" onerror="this.style.display='none'" />
         <span class="site-title">Wine Cellar</span>
       </div>
-      <div class="header-meta">
-        <span id="last-sync">Loading…</span>
-      </div>
+      <div class="header-meta" id="last-sync">Loading…</div>
     </div>
   </header>
 
   <main>
-    <section class="stats-row" id="stats">
-      <div class="stat-card">
-        <span class="stat-val" id="stat-bottles">—</span>
-        <span class="stat-label">Bottles</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-val" id="stat-wines">—</span>
-        <span class="stat-label">Wines</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-val" id="stat-avg-score">—</span>
-        <span class="stat-label">Avg Score</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-val" id="stat-value">—</span>
-        <span class="stat-label">Cellar Value</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-val" id="stat-drinking-now">—</span>
-        <span class="stat-label">Drink Now</span>
-      </div>
+    <section class="stats-row">
+      <div class="stat-card"><span class="stat-val" id="stat-bottles">—</span><span class="stat-label">Bottles</span></div>
+      <div class="stat-card"><span class="stat-val" id="stat-wines">—</span><span class="stat-label">Wines</span></div>
+      <div class="stat-card"><span class="stat-val" id="stat-avg-score">—</span><span class="stat-label">Avg Score</span></div>
+      <div class="stat-card"><span class="stat-val" id="stat-value">—</span><span class="stat-label">Cellar Value</span></div>
+      <div class="stat-card"><span class="stat-val" id="stat-drinking-now">—</span><span class="stat-label">Drink Now</span></div>
     </section>
 
     <section class="controls">
@@ -54,11 +37,13 @@
           <select id="sort-select">
             <option value="score_personal|desc">My Score ↓</option>
             <option value="score_community|desc">CT Score ↓</option>
+            <option value="score_drinkability|desc">Drinkability ↓</option>
             <option value="vintage|desc">Vintage ↓</option>
             <option value="vintage|asc">Vintage ↑</option>
             <option value="drink_window_start|asc">Drink Window</option>
             <option value="price_paid|desc">Price ↓</option>
             <option value="wine_name|asc">Name A–Z</option>
+            <option value="quantity|desc">Qty ↓</option>
           </select>
         </label>
       </div>
@@ -69,7 +54,7 @@
         <thead>
           <tr>
             <th data-col="wine_name">Wine</th>
-            <th data-col="vintage">Vint.</th>
+            <th data-col="vintage" class="num">Vint.</th>
             <th data-col="producer">Producer</th>
             <th data-col="wine_type">Type</th>
             <th data-col="variety">Variety</th>
@@ -77,9 +62,8 @@
             <th data-col="sub_region">Sub-Region</th>
             <th data-col="score_personal" class="num">Mine</th>
             <th data-col="score_community" class="num">CT</th>
-            <th data-col="score_drinkability" class="num">Drink</th>
-            <th data-col="drink_window_start" class="num">From</th>
-            <th data-col="drink_window_end" class="num">To</th>
+            <th data-col="score_drinkability" class="num">Drink.</th>
+            <th data-col="drink_window_start" class="num">Window</th>
             <th data-col="quantity" class="num">Qty</th>
             <th data-col="bottle_size">Size</th>
             <th data-col="location">Loc.</th>

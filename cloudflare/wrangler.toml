@@ -1,0 +1,15 @@
+# Cloudflare Pages configuration
+# Deploy: CLOUDFLARE_API_TOKEN=<token> npx wrangler pages deploy dashboard --project-name wine-cellar
+
+name = "wine-cellar"
+pages_build_output_dir = "dashboard"
+
+[vars]
+# Set these as encrypted secrets in the Cloudflare Pages dashboard
+# Pages → wine-cellar → Settings → Environment variables
+# SUPABASE_URL = "https://YOUR_PROJECT.supabase.co"       (not secret — set as plain var)
+# SUPABASE_ANON_KEY = "YOUR_ANON_KEY"                     (set as secret)
+
+[[routes]]
+pattern = "wine.wyograds.com/*"
+zone_name = "wyograds.com"
