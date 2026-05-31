@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wine Cellar — WyoGrads</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍷</text></svg>" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <img src="assets/logo.png" alt="WyoGrads" class="logo" onerror="this.style.display='none'" />
+        <span class="site-title">Wine Cellar</span>
+      </div>
+      <div class="header-meta">
+        <span id="last-sync">Loading…</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="stats-row" id="stats">
+      <div class="stat-card">
+        <span class="stat-val" id="stat-bottles">—</span>
+        <span class="stat-label">Bottles</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-val" id="stat-wines">—</span>
+        <span class="stat-label">Wines</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-val" id="stat-avg-score">—</span>
+        <span class="stat-label">Avg Score</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-val" id="stat-value">—</span>
+        <span class="stat-label">Cellar Value</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-val" id="stat-drinking-now">—</span>
+        <span class="stat-label">Drink Now</span>
+      </div>
+    </section>
+
+    <section class="controls">
+      <input type="search" id="search" placeholder="Search wine, producer, region…" autocomplete="off" />
+      <div class="type-filters" id="type-filters">
+        <button class="filter-btn active" data-type="">All</button>
+      </div>
+      <div class="sort-secondary">
+        <label>Sort
+          <select id="sort-select">
+            <option value="score_personal|desc">My Score ↓</option>
+            <option value="score_community|desc">CT Score ↓</option>
+            <option value="vintage|desc">Vintage ↓</option>
+            <option value="vintage|asc">Vintage ↑</option>
+            <option value="drink_window_start|asc">Drink Window</option>
+            <option value="price_paid|desc">Price ↓</option>
+            <option value="wine_name|asc">Name A–Z</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <div class="table-wrap">
+      <table id="wine-table">
+        <thead>
+          <tr>
+            <th data-col="wine_name">Wine</th>
+            <th data-col="vintage">Vint.</th>
+            <th data-col="producer">Producer</th>
+            <th data-col="wine_type">Type</th>
+            <th data-col="variety">Variety</th>
+            <th data-col="region">Region</th>
+            <th data-col="sub_region">Sub-Region</th>
+            <th data-col="score_personal" class="num">Mine</th>
+            <th data-col="score_community" class="num">CT</th>
+            <th data-col="score_drinkability" class="num">Drink</th>
+            <th data-col="drink_window_start" class="num">From</th>
+            <th data-col="drink_window_end" class="num">To</th>
+            <th data-col="quantity" class="num">Qty</th>
+            <th data-col="bottle_size">Size</th>
+            <th data-col="location">Loc.</th>
+            <th data-col="bin">Bin</th>
+            <th data-col="price_paid" class="num">Paid</th>
+            <th data-col="value_score" class="num">Val.</th>
+            <th data-col="store">Store</th>
+            <th data-col="purchase_date">Purchased</th>
+          </tr>
+        </thead>
+        <tbody id="wine-tbody">
+          <tr><td colspan="20" class="loading">Loading cellar…</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pagination" id="pagination"></div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
